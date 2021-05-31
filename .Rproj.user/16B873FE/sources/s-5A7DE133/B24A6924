@@ -1,0 +1,32 @@
+{
+    "id": "B24A6924",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1622437383760.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "expression": "df.sum",
+        "caption": "df.sum",
+        "totalObservations": "84",
+        "displayedObservations": "84",
+        "variables": "3",
+        "cacheKey": "72AED47A",
+        "object": "df.sum",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=df.sum&cache_key=72AED47A&max_cols=50",
+        "preview": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 7307491043415436322,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1622437383760,
+    "read_only": false,
+    "read_only_alternatives": []
+}
