@@ -77,3 +77,17 @@ for(i in 1:length(levels(df3$Site.name ))) {
   )
   dev.off()
 }
+
+
+## for monthly averages ----
+
+df <- read.csv(paste(dt.dir, "Borewater_Temp.csv", sep='/')) %>%
+  mutate(Collected.Date = as.Date(Collected.Date)) %>%
+  mutate_at(month = months(Collected.Date)) %>%
+  glimpse()
+head(df)
+str(df)
+
+df$month <- months(df$Collected.Date)
+head(df)
+str(df)

@@ -1,0 +1,25 @@
+{
+    "id": "46D5EA44",
+    "path": "Y://FRDC_SGD/Bore_Temp/Bore_water_temperature.R",
+    "project_path": "Bore_Temp/Bore_water_temperature.R",
+    "type": "r_source",
+    "hash": "2861307478",
+    "contents": "",
+    "dirty": false,
+    "created": 1622093054929.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "cursorPosition": "87,0",
+        "scrollLine": "47"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1622184058,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1622184058559,
+    "read_only": false,
+    "read_only_alternatives": []
+}
