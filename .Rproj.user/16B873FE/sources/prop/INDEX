@@ -1,3 +1,7 @@
 Y%3A%2F%2FFRDC_SGD%2FBore_Temp%2FBore_water_temperature.R="72629EBF"
 Y%3A%2F%2FFRDC_SGD%2FBore_Temp%2FSelect_sites_w_temp.R="9ECCDD2A"
+Y%3A%2F%2FFRDC_SGD%2FSST_Satellite%2FExtractSSTfromNetcdf.R="C0EB2C81"
+Y%3A%2F%2FFRDC_SGD%2FSST_Satellite%2FExtract_NetCDF.R="8C303079"
+Y%3A%2F%2FFRDC_SGD%2FSST_Satellite%2FListtoRaster.R="9091BA43"
 Y%3A%2FFRDC_SGD%2FBore_Temp%2FBore_water_temperature.R="3C03F74F"
+Y%3A%2FFRDC_SGD%2FSST_Satellite%2FExtract_NetCDF.R="F5362CD2"

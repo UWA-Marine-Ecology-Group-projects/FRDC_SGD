@@ -19,8 +19,7 @@ w.dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
 p.dir <- paste(w.dir, "plots", sep = '/')
 dr.dir <- paste(w.dir, "data/raw", sep='/')
 dt.dir <- paste(w.dir, "data/tidy", sep='/')
-s.dir <- paste(w.dir, "shapefiles", sep='/')
-r.dir <- paste(w.dir, "rasters", sep='/')
+s.dir <- paste(w.dir, "data/spatial", sep ='/')
 
 
 # read site metadata ----
@@ -104,6 +103,8 @@ df.sum <- df %>%
   #mutate(month.year = as.Date(month.year, format = '%m/%y')) %>%
   glimpse()
 
+write.csv(df.sum, paste(dt.dir, "Bore_Temp_summary.csv", sep='/'))
+
 
 # PLOT ----
 
@@ -126,3 +127,29 @@ for(i in 1:length(levels(df.sum$Site.name))) {
 }
 
 
+## Save site with unique coordinates ----
+# read data ----
+df <- read.csv(paste(dt.dir, "Borewater_Temp.csv", sep='/')) %>%
+  dplyr::mutate_at(c('Site.Ref', 'Variable.Name', 'Quality', 'Site.name', 'day', 'month', 'year'), as.factor) %>%
+  mutate(date = dmy(Collected.Date)) %>%
+  mutate(month2 = recode_factor(month, "1"='01', "2"='02', "3"='03', "4"='04', "5"='05', "6"='06', "7"='07', "8"='08', 
+                                "9"='09', "10"='10', "11"='11', "12"='12')) %>%
+  mutate(month.year = paste0(month2, '/', year)) %>%
+  dplyr::mutate_at('month.year', as.factor) %>%
+  glimpse()
+
+str(df)
+
+summary(df)
+
+
+
+df2 <- df %>% 
+  group_by(Site.name) %>%
+  slice(which.max(temp)) %>%
+  glimpse()
+
+str(df2)
+
+
+write.csv(df2, paste(s.dir, "Bore_sites_w_temp.csv", sep='/'))
